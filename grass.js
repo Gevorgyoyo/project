@@ -1,3 +1,4 @@
+module.export=var LivingCreature=require("LivingCreature.js")
 class Grass extends LivingCreature{
     constructor(){
         super(x,y)

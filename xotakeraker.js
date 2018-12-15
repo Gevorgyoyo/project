@@ -1,4 +1,5 @@
-class Xotakeraker extends LivingCreature{
+var LivingCreature=require("LivingCreature.js")
+module.export=class Xotakeraker extends LivingCreature{
     constructor(){
         super(x,y)
         this.energy=15

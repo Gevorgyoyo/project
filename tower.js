@@ -1,4 +1,5 @@
-class Tower extends LivingCreature{
+var LivingCreature=require("LivingCreature.js")
+module.export=class Tower extends LivingCreature{
     constructor() {
         super(x,y);
         this.sources = 15;

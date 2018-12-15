@@ -1,4 +1,5 @@
-class Golem extends LivingCreature{
+var LivingCreature=require("LivingCreature.js")
+module.export=class Golem extends LivingCreature{
     constructor() {
         super(x,y);
             this.directions = [
