@@ -1,7 +1,7 @@
-var LivingCreature=require("LivingCreature.js")
-module.export=class Tower extends LivingCreature{
+var LivingCreature = require("LivingCreature.js")
+module.exports = class Tower extends LivingCreature {
     constructor() {
-        super(x,y);
+        super(x, y);
         this.sources = 15;
         this.directions = [
             [this.x - 1, this.y - 1],
@@ -82,28 +82,28 @@ module.export=class Tower extends LivingCreature{
             }
         }
     }
-    
+
     spawn() {
         var empty = random(this.chooseCell(0))
-        
-        if (empty && this.sources >= 20 ) {
+
+        if (empty && this.sources >= 20) {
             var newX = empty[0]
             var newY = empty[1]
 
             var gol = new Golem(newX, newY)
             var xotak = new Xotaker(newX, newY)
             var xtt = new Xotakeraker(newX, newY)
-            var arr = [gol, xotak,xtt]
+            var arr = [gol, xotak, xtt]
             var mob = random(arr)
             if (mob == gol) {
                 matrix[newY][newX] = 5
                 golemArr.push(gol)
             }
-            else if(mob= xotak){
+            else if (mob = xotak) {
                 matrix[newY][newX] = 2
                 xotakerArr.push(xotak)
             }
-            
+
             this.sources -= 20
         }
     }

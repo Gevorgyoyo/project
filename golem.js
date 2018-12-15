@@ -1,8 +1,8 @@
-var LivingCreature=require("LivingCreature.js")
-module.export=class Golem extends LivingCreature{
+var LivingCreature = require("LivingCreature.js")
+module.exports = class Golem extends LivingCreature {
     constructor() {
-        super(x,y);
-            this.directions = [
+        super(x, y);
+        this.directions = [
             [this.x - 1, this.y - 1],
             [this.x, this.y - 1],
             [this.x + 1, this.y - 1],

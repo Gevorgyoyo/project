@@ -1,8 +1,8 @@
-module.export=var LivingCreature=require("LivingCreature.js")
-class Grass extends LivingCreature{
-    constructor(){
-        super(x,y)
-        this.multiply=0
+var LivingCreature = require("LivingCreature.js")
+module.exports = class Grass extends LivingCreature {
+    constructor() {
+        super(x, y)
+        this.multiply = 0
     }
     mult() {
         var empty = random(this.chooseCell(0))
